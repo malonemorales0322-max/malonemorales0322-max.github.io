@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Professional resume of Malone de Leon Morales — operations, administration, systems, and business support professional.">
-  <title>Malone de Leon Morales | Professional Resume</title>
+  <meta name="description" content="Virtual assistant portfolio and professional resume of Malone de Leon Morales — operations, administration, reporting, systems, and business support.">
+  <title>Malone de Leon Morales | Virtual Assistant Portfolio</title>
   <style>
     :root {
       --ink: #10243d;
@@ -68,14 +68,33 @@
     .subcard p { margin: 0; color: var(--muted); }
     .training { columns: 2; column-gap: 36px; margin: 0; padding-left: 20px; color: #3e4e5e; }
     .training li { break-inside: avoid; margin-bottom: 8px; }
+    .portfolio-intro { max-width: 780px; margin: 0 0 30px; color: var(--muted); font-size: 1.05rem; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project-card { display: flex; flex-direction: column; padding: 26px; background: linear-gradient(160deg, #fff 0%, #f5f9fc 100%); border: 1px solid var(--line); border-radius: 18px; }
+    .project-number { display: grid; place-items: center; width: 42px; height: 42px; margin-bottom: 20px; color: white; background: var(--blue); border-radius: 12px; font-size: .82rem; font-weight: 850; letter-spacing: .08em; }
+    .project-card h3 { margin: 0 0 9px; font-size: 1.2rem; line-height: 1.3; }
+    .project-card > p { margin: 0 0 18px; color: var(--muted); }
+    .project-card h4 { margin: 15px 0 5px; color: var(--blue); font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; }
+    .project-card ul { margin: 0; padding-left: 19px; color: #3e4e5e; }
+    .project-card li + li { margin-top: 4px; }
+    .sample-note { margin: 22px 0 0; padding: 15px 18px; color: #37506a; background: var(--pale); border-left: 4px solid var(--blue); border-radius: 0 10px 10px 0; font-size: .92rem; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .service { padding: 21px; background: var(--canvas); border: 1px solid var(--line); border-radius: 15px; }
+    .service h3 { margin: 0 0 6px; font-size: 1.04rem; }
+    .service p { margin: 0; color: var(--muted); }
+    .cta { display: flex; align-items: center; justify-content: space-between; gap: 28px; color: white; background: var(--ink); }
+    .cta h2 { max-width: 660px; margin-bottom: 8px; }
+    .cta p { margin: 0; color: #cbd8e5; }
+    .cta-button { flex: 0 0 auto; display: inline-flex; padding: 13px 20px; color: var(--ink); background: white; border-radius: 999px; text-decoration: none; font-weight: 800; }
     footer { padding: 28px 0 44px; color: var(--muted); text-align: center; font-size: .9rem; }
     @media (max-width: 800px) {
       .links a:not(.primary-link) { display: none; }
       .hero { padding-top: 56px; }
-      .hero-grid, .two-col { grid-template-columns: 1fr; }
+      .hero-grid, .two-col, .project-grid, .service-grid { grid-template-columns: 1fr; }
       .hero-grid { gap: 32px; }
       .role { grid-template-columns: 1fr; gap: 6px; }
       .training { columns: 1; }
+      .cta { align-items: flex-start; flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
@@ -85,6 +104,8 @@
     <nav class="shell nav" aria-label="Main navigation">
       <a class="monogram" href="#top">MDM</a>
       <div class="links">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a class="primary-link" href="mailto:malonemorales0322@gmail.com">Contact</a>
@@ -95,9 +116,9 @@
   <div id="top" class="shell hero">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Professional Resume</p>
+        <p class="eyebrow">General & Operations Virtual Assistant</p>
         <h1>Malone de Leon Morales</h1>
-        <p class="intro">Versatile operations and business support professional with experience across leadership, administration, process improvement, compliance, financial operations, reporting, technical support, and customer service.</p>
+        <p class="intro">Reliable virtual support backed by real experience in operations, administration, reporting, process improvement, financial coordination, technical support, and customer service.</p>
       </div>
       <aside class="contact-card" aria-label="Contact details">
         <p>Based in the Philippines</p>
@@ -110,6 +131,53 @@
   </div>
 
   <main class="shell">
+    <section id="portfolio" class="panel" aria-labelledby="portfolio-heading">
+      <p class="section-label">VA portfolio</p>
+      <h2 id="portfolio-heading">Practical sample work for organized, dependable business support.</h2>
+      <p class="portfolio-intro">These self-directed portfolio projects demonstrate how I approach common virtual-assistant assignments: organize the information, build a clear process, check the details, and deliver something the team can use immediately.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-number">01</div>
+          <h3>Operations Tracker & Weekly Report</h3>
+          <p>A structured reporting workflow for turning daily activity into a concise weekly management update.</p>
+          <h4>Example deliverables</h4>
+          <ul><li>Task and KPI tracker</li><li>Weekly status summary</li><li>Issues and follow-up log</li><li>Clear priority flags</li></ul>
+          <h4>Relevant tools</h4>
+          <p>Microsoft Excel, Google Sheets, Microsoft Word</p>
+        </article>
+        <article class="project-card">
+          <div class="project-number">02</div>
+          <h3>SOP & Employee Onboarding Pack</h3>
+          <p>A repeatable documentation set that helps a new team member understand responsibilities and complete essential steps.</p>
+          <h4>Example deliverables</h4>
+          <ul><li>Step-by-step SOP</li><li>Onboarding checklist</li><li>Role expectations</li><li>Training follow-up schedule</li></ul>
+          <h4>Relevant tools</h4>
+          <p>Microsoft Office, Google Workspace, airSlate</p>
+        </article>
+        <article class="project-card">
+          <div class="project-number">03</div>
+          <h3>Data Cleanup & Reconciliation</h3>
+          <p>A methodical review of records to identify missing entries, duplicates, mismatches, and items requiring confirmation.</p>
+          <h4>Example deliverables</h4>
+          <ul><li>Cleaned master list</li><li>Exception report</li><li>Reconciliation checklist</li><li>Documented corrections</li></ul>
+          <h4>Relevant tools</h4>
+          <p>Microsoft Excel, Xero training, QuickBooks training</p>
+        </article>
+      </div>
+      <p class="sample-note"><strong>Portfolio note:</strong> These are representative sample projects created to demonstrate my working approach. They are not presented as paid client engagements.</p>
+    </section>
+
+    <section id="services" class="panel" aria-labelledby="services-heading">
+      <p class="section-label">How I can help</p>
+      <h2 id="services-heading">Versatile support for daily operations and growing teams.</h2>
+      <div class="service-grid">
+        <article class="service"><h3>Administrative Support</h3><p>Document preparation, file organization, data entry, records maintenance, research, and routine coordination.</p></article>
+        <article class="service"><h3>Operations Coordination</h3><p>Task tracking, workflow follow-up, SOP documentation, scheduling support, and process improvement.</p></article>
+        <article class="service"><h3>Reporting & Data Support</h3><p>Spreadsheet organization, data validation, recurring reports, reconciliation support, and issue tracking.</p></article>
+        <article class="service"><h3>Customer & Team Support</h3><p>Professional communication, inquiry handling, technical troubleshooting, onboarding, and training assistance.</p></article>
+      </div>
+    </section>
+
     <section class="panel" aria-labelledby="strengths-heading">
       <p class="section-label">Core strengths</p>
       <h2 id="strengths-heading">A broad skill set built for reliable business support.</h2>
@@ -164,6 +232,15 @@
         <li>Course Designing — MARINA, 2016</li>
         <li>Anti-Money Laundering and Combating Terrorist Financing — The Real Bank, 2013</li>
       </ul>
+    </section>
+
+    <section class="panel cta" aria-labelledby="contact-heading">
+      <div>
+        <p class="section-label">Let’s work together</p>
+        <h2 id="contact-heading">Need a dependable VA who understands both details and operations?</h2>
+        <p>I bring transferable, hands-on business experience and a professional approach to every assignment.</p>
+      </div>
+      <a class="cta-button" href="mailto:malonemorales0322@gmail.com?subject=Virtual%20Assistant%20Opportunity">Contact Malone</a>
     </section>
   </main>
   <footer class="shell">© 2026 Malone de Leon Morales</footer>
