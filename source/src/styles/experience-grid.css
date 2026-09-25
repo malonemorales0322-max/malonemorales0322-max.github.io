@@ -1,0 +1,15 @@
+.xgrid { min-height: 100%; padding-bottom: 2rem; }
+.xgrid__glass { padding: clamp(1rem, 2vw, 1.6rem); }
+.xgrid__timeline { list-style: none; margin: 0; padding: 0; }
+.xgrid__role { display: grid; grid-template-columns: 3rem 10rem minmax(0, 1fr); gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+.xgrid__role:last-child { border-bottom: 0; }
+.xgrid__index { color: var(--orange); font-weight: 800; }
+.xgrid__date { color: var(--muted); font-size: .82rem; font-weight: 700; }
+.xgrid__body h2 { margin: 0; color: var(--navy); font-size: 1.05rem; }
+.xgrid__title { margin: .15rem 0 .55rem; color: var(--orange); font-weight: 700; }
+.xgrid__body ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .88rem; }
+.xgrid__body li + li { margin-top: .25rem; }
+.xgrid__resume { display: inline-flex; margin-top: 1.25rem; padding: .75rem 1rem; border-radius: 999px; color: white; background: var(--navy); font-weight: 700; text-decoration: none; }
+.project-tools { margin: auto 0 0; padding-top: .85rem; color: var(--muted); font-size: .78rem; }
+.project-note { margin: 1rem .25rem 0; color: var(--muted); font-size: .82rem; }
+@media (max-width: 700px) { .xgrid__role { grid-template-columns: 2rem 1fr; } .xgrid__date { grid-column: 2; } .xgrid__body { grid-column: 2; } }
