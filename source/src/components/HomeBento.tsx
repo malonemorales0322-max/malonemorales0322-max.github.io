@@ -16,7 +16,6 @@ import {
   SealCheck,
 } from '@/components/slab'
 import { gymFunnel, bookingFunnel, websiteFunnel, type Funnel } from '@/data/funnels'
-import { profile } from '@/data/profile'
 
 /**
  * Home's showcase: one card per rail view, each an index of what that view
@@ -102,11 +101,7 @@ export default function HomeBento() {
       {/* About: the profile portrait. */}
       <Link to="/about" className="bento__card bento__card--about">
         <CardHead Icon={User} title="About" desc="An operations professional with business and IT training." />
-        <div className="bento__media bento__fan" aria-hidden="true">
-          <span className="bento__photo">
-            <img src={profile.avatarSrc} alt="" loading="lazy" decoding="async" />
-          </span>
-        </div>
+        <p className="bento__about-line">People. Systems. Follow-through.</p>
       </Link>
 
       {/* AI builds: the systems from the Projects tree, two chip rows
