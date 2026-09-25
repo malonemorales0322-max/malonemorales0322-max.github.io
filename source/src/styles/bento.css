@@ -79,7 +79,7 @@
   border-radius: 11px;
   background: var(--orange);
   color: var(--white);
-  box-shadow: 0 8px 18px -10px rgba(255, 122, 26, 0.9);
+  box-shadow: 0 8px 18px -10px rgba(53, 108, 145, 0.9);
   transition: transform var(--dur-med) var(--ease-spring);
 }
 .bento__card:hover .bento__icon { transform: translateY(-2px) rotate(-4deg); }
@@ -173,24 +173,20 @@
   to   { transform: translateY(-50%); }
 }
 
-/* About: three photos fanned like a hand of cards. */
+/* About: one clear portrait in a restrained frame. */
 .bento__fan { display: grid; place-items: center; }
 .bento__photo {
-  grid-area: 1 / 1;
   display: block;
-  width: clamp(72px, 5.6vw, 96px);
-  aspect-ratio: 3 / 4;
-  border-radius: 12px;
+  width: clamp(82px, 6.3vw, 112px);
+  aspect-ratio: 1;
+  border-radius: 14px;
   overflow: hidden;
   background: var(--plate);
-  box-shadow: 0 0 0 3px var(--white), 0 14px 30px -14px rgba(6, 12, 26, 0.6);
-  transform: rotate(calc((var(--i) - 1) * 9deg)) translateX(calc((var(--i) - 1) * 26px));
-  transition: transform var(--dur-slow) var(--ease-spring);
+  box-shadow: 0 0 0 1px var(--line), 0 14px 30px -14px rgba(6, 12, 26, 0.35);
+  transition: transform var(--dur-med) var(--ease-out);
 }
-.bento__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
-.bento__card:hover .bento__photo {
-  transform: rotate(calc((var(--i) - 1) * 14deg)) translateX(calc((var(--i) - 1) * 34px)) translateY(-4px);
-}
+.bento__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.bento__card:hover .bento__photo { transform: translateY(-4px); }
 
 /* Tools: two chip rows scrolling against each other. */
 .bento__chips {

@@ -274,7 +274,7 @@ body {
   height: 44px;
   padding: 0 20px;
   letter-spacing: -0.006em;
-  box-shadow: 0 1px 2px rgba(6, 12, 26, 0.12), 0 8px 20px -12px rgba(11, 30, 63, 0.35);
+  box-shadow: 0 1px 2px rgba(6, 12, 26, 0.12), 0 8px 20px -12px rgba(21, 40, 63, 0.35);
   transition:
     transform var(--dur-med) var(--ease-spring),
     box-shadow var(--dur-med) var(--ease-out),
@@ -282,7 +282,7 @@ body {
 }
 .home__cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 1px 2px rgba(6, 12, 26, 0.12), 0 12px 26px -12px rgba(11, 30, 63, 0.45);
+  box-shadow: 0 1px 2px rgba(6, 12, 26, 0.12), 0 12px 26px -12px rgba(21, 40, 63, 0.45);
 }
 
 /* ---------- 7. Glass plate ----------
@@ -437,7 +437,7 @@ body {
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.35),
       0 1px 2px rgba(6, 12, 26, 0.2),
-      0 10px 24px -10px rgba(255, 122, 26, 0.55);
+      0 10px 24px -10px rgba(53, 108, 145, 0.55);
     transition: transform var(--dur-med) var(--ease-spring),
                 background var(--dur-fast) var(--ease-out);
   }
@@ -449,7 +449,7 @@ body {
     backdrop-filter: blur(16px) saturate(160%);
     -webkit-backdrop-filter: blur(16px) saturate(160%);
     border-color: var(--line);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 6px 16px -10px rgba(11, 30, 63, 0.35);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 6px 16px -10px rgba(21, 40, 63, 0.35);
     transition: transform var(--dur-med) var(--ease-spring), background var(--dur-fast) var(--ease-out);
   }
   [data-theme='dark'] .theme-btn { background: color-mix(in srgb, var(--paper) 72%, transparent); }
@@ -489,7 +489,7 @@ body {
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.7),
       0 1px 1.5px rgba(6, 12, 26, 0.04),
-      0 12px 30px -20px rgba(11, 30, 63, 0.3);
+      0 12px 30px -20px rgba(21, 40, 63, 0.3);
   }
   [data-theme='dark'] .htile { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px -20px rgba(0, 0, 0, 0.7); }
   .htile__go { transition: transform var(--dur-med) var(--ease-spring); }
@@ -499,19 +499,19 @@ body {
   .hproof {
     border-radius: 18px;
     border-color: var(--line);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 24px -18px rgba(11, 30, 63, 0.3);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 8px 24px -18px rgba(21, 40, 63, 0.3);
   }
   [data-theme='dark'] .hproof { box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05); }
   .pfilter { padding: 3px; gap: 3px; }
   .pfilter__btn { min-height: 34px; font-size: 13px; letter-spacing: -0.004em; }
   .pfilter__btn[aria-pressed='true'] {
-    box-shadow: 0 1px 2px rgba(6, 12, 26, 0.08), 0 3px 10px -4px rgba(11, 30, 63, 0.25);
+    box-shadow: 0 1px 2px rgba(6, 12, 26, 0.08), 0 3px 10px -4px rgba(21, 40, 63, 0.25);
   }
 
   /* ---------- Profile header ---------- */
   .hprofile__avatar {
     border-width: 0;
-    box-shadow: inset 0 0 0 1px var(--line), 0 6px 16px -8px rgba(11, 30, 63, 0.35);
+    box-shadow: inset 0 0 0 1px var(--line), 0 6px 16px -8px rgba(21, 40, 63, 0.35);
   }
 
   /* ---------- Preferences on the phone shell ---------- */

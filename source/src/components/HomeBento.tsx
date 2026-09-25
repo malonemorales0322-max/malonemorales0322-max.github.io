@@ -47,9 +47,6 @@ const CLIENTS = [
   { name: 'The Real Bank', role: 'Marketing & ATM Operations', work: 'Banking · Reconciliation · Client Service', logo: '/icons/resume.svg' },
 ]
 
-// Three photos of you, fanned. Small copies are fine - the fan shows them under 100px.
-const PHOTOS = [profile.avatarSrc, '/avatar.svg?2', '/avatar.svg?3']
-
 const WORKFLOW_ITEMS = [
   { id: 'tracking', name: 'Task tracking', status: 'live', Icon: Gear },
   { id: 'sops', name: 'SOPs', status: 'live', Icon: AddressBook },
@@ -102,15 +99,13 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* About: a fanned stack of photos. */}
+      {/* About: the profile portrait. */}
       <Link to="/about" className="bento__card bento__card--about">
         <CardHead Icon={User} title="About" desc="An operations professional with business and IT training." />
         <div className="bento__media bento__fan" aria-hidden="true">
-          {PHOTOS.map((src, i) => (
-            <span key={src} className="bento__photo" style={{ ['--i' as string]: i }}>
-              <img src={src} alt="" loading="lazy" decoding="async" />
-            </span>
-          ))}
+          <span className="bento__photo">
+            <img src={profile.avatarSrc} alt="" loading="lazy" decoding="async" />
+          </span>
         </div>
       </Link>
 

@@ -47,7 +47,7 @@ export const profile: Profile = {
   firstName: 'Malone',
   handle: '@malonemorales',
   role: 'Operations & Virtual Support',
-  avatarSrc: '/avatar.svg',
+  avatarSrc: '/profile-photo.jpg',
   verifiedLabel: 'MBA and Information Technology graduate',
   email: 'malonemorales0322@gmail.com',
   location: 'Pampanga, Philippines',
@@ -61,8 +61,8 @@ export const profile: Profile = {
   displayName: { line1: 'Operations made clear.', line2: 'Work moved forward.' },
   hero: {
     body: 'I help growing teams stay organized through dependable administration, reporting, workflow support, and customer service.',
-    portraitSrc: '/avatar.svg',
-    portraitAlt: 'Malone Morales monogram',
+    portraitSrc: '/profile-photo.jpg',
+    portraitAlt: 'Portrait of Malone Morales',
   },
   socials: [
     { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/malone-morales-6b0a92182', iconPath: '/icons/linkedin.svg' },

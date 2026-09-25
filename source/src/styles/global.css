@@ -183,7 +183,7 @@ main > * {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 55%, rgba(255, 122, 26, 0.08), transparent 55%),
+    radial-gradient(circle at 50% 55%, rgba(53, 108, 145, 0.08), transparent 55%),
     var(--navy-ink);
 }
 
@@ -368,7 +368,7 @@ main > * {
   height: 220vmax;
   margin: -110vmax 0 0 -110vmax;
   border-radius: 50%;
-  /* Burnt orange, not the bright accent: a full-viewport flash of #FF7A1A is
+  /* Burnt orange, not the bright accent: a full-viewport flash of #356C91 is
      an eye-strain / photosensitivity risk, so the flood uses the darker ink
      tone and lets the accents stay bright at small sizes only. */
   background: var(--orange-ink);
@@ -440,43 +440,6 @@ main > * {
   }
   .intro__mark, .intro__word { --ring-o: 1; }
   .intro__tag { --ring-o: 0.6; }
-}
-
-/* ============================================
-   CURSOR RING
-   One lagged ring trailing the native cursor
-   (which stays visible - see CursorRing.tsx).
-   White + difference blend reads near-black on
-   the cream shader and near-white on navy-ink,
-   so one element works on every surface.
-   ============================================ */
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  display: grid;
-  place-items: center;
-  border: 1.5px solid var(--white);
-  border-radius: var(--radius-circle);
-  background: transparent;
-  mix-blend-mode: difference;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  will-change: transform;
-}
-.cursor-ring__label {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  /* Raw #000 is correct here, not a palette violation: it is a blend-math
-     operand. Under difference, black-on-white-disc inverts to light text
-     on a dark disc over cream, dark text on a light disc over navy-ink. */
-  color: #000;
-  opacity: 0;
 }
 
 /* ============================================

@@ -1,4 +1,4 @@
-import{r as C,g as z,j as H}from"./index-Csvhcx1u.js";import{S as W,O as F,W as V,P as Y,a as j,V as q,M as G}from"./three-DSc-0QTv.js";const X=`
+import{r as C,g as z,j as H}from"./index-DG7exxAm.js";import{S as W,O as F,W as V,P as Y,a as j,V as q,M as G}from"./three-DSc-0QTv.js";const X=`
   vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
   vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}
   vec4 permute(vec4 x){return mod289(((x*34.)+1.)*x);}
@@ -88,7 +88,7 @@ import{r as C,g as z,j as H}from"./index-Csvhcx1u.js";import{S as W,O as F,W as 
     float line    = 1.0 - smoothstep(0.0, w, dist);
 
     // Theme colors (kept identical to v1 so the rest of the page does not shift).
-    vec3 bgLight   = vec3(0.957, 0.957, 0.929); // #F4F4ED cream
+    vec3 bgLight   = vec3(0.949, 0.961, 0.973); // #F4F4ED cream
     vec3 lineLight = vec3(0.46,  0.46,  0.46);  // soft neutral gray contour on cream
     vec3 bgDark    = vec3(0.024, 0.047, 0.102); // #060C1A navy ink
     vec3 lineDark  = vec3(1.0,   1.0,   1.0);   // solid white on navy (black would be invisible)
