@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-label="Operations page">
+  <rect width="960" height="540" fill="#0F1C2E"/>
+  <rect x="48" y="48" width="864" height="444" rx="28" fill="#15283F"/>
+  <rect x="48" y="48" width="864" height="72" rx="28" fill="#1C334D"/>
+  <rect x="48" y="90" width="864" height="30" fill="#1C334D"/>
+  <text x="72" y="92" fill="#7EB6D6" font-family="system-ui,sans-serif" font-size="16" letter-spacing="2">MALONE MORALES</text>
+  <text x="72" y="230" fill="#F4F7FA" font-family="Georgia,serif" font-size="40">Operations page</text>
+  <text x="72" y="278" fill="#9BB0C3" font-family="system-ui,sans-serif" font-size="20">Offer · tools · start</text>
+  <rect x="72" y="340" width="210" height="48" rx="24" fill="#7EB6D6"/>
+  <text x="96" y="370" fill="#0F1C2E" font-family="system-ui,sans-serif" font-size="16" font-weight="700">View sample</text>
+</svg>
