@@ -1,30 +1,24 @@
-import { FlowIcon, PlanIcon, SparkIcon, DeviceIcon } from './ProjectIcons'
+import { FlowIcon, PlanIcon, DeviceIcon } from './ProjectIcons'
 import { CheckCircle } from '@/components/slab'
 
 const PROJECTS = [
   {
-    index: '01', title: 'Operations Tracker & Weekly Report', eyebrow: 'Portfolio sample', Icon: FlowIcon,
-    desc: 'A structured system for converting daily activity into a clear management update.',
-    items: ['Task and KPI tracker', 'Weekly status summary', 'Issues and follow-up log', 'Priority flags'],
+    index: '01', title: 'airSlate Workflow Support', eyebrow: 'Paid remote work', Icon: DeviceIcon,
+    desc: 'Problem: document bots stalled mid-flow. Action: remote diagnosis of configuration and execution errors. Result: working workflows plus a written runbook the client could reuse.',
+    items: ['Problem named in the ticket', 'Fix applied remotely', 'Steps documented for reuse'],
+    tools: ['airSlate', 'Slack', 'Jira'],
+  },
+  {
+    index: '02', title: 'Operations Tracker & Weekly Report', eyebrow: 'Case study sample', Icon: FlowIcon,
+    desc: 'Problem: daily work lived in chat and memory. Action: one tracker plus a one-page weekly brief. Result: owners, due dates, and exceptions visible without a long meeting.',
+    items: ['One source of truth', 'Weekly exception-first brief', 'Clear next action'],
     tools: ['Excel', 'Google Sheets', 'Word'],
   },
   {
-    index: '02', title: 'SOP & Employee Onboarding Pack', eyebrow: 'Portfolio sample', Icon: PlanIcon,
-    desc: 'A repeatable documentation set that makes responsibilities and next steps obvious.',
-    items: ['Step-by-step SOP', 'Onboarding checklist', 'Role expectations', 'Training follow-up'],
+    index: '03', title: 'SOP & Onboarding Pack', eyebrow: 'Case study sample', Icon: PlanIcon,
+    desc: 'Problem: new people learned by asking around. Action: current SOP, checklist, and role sheet in one pack. Result: a handoff that does not depend on whoever is on shift.',
+    items: ['Live procedure, named owner', 'Onboarding checklist', 'Handoff without guesswork'],
     tools: ['Microsoft 365', 'Google Workspace', 'airSlate'],
-  },
-  {
-    index: '03', title: 'Data Cleanup & Reconciliation', eyebrow: 'Portfolio sample', Icon: SparkIcon,
-    desc: 'A controlled review for missing records, duplicates, mismatches, and exceptions.',
-    items: ['Cleaned master list', 'Exception report', 'Reconciliation checklist', 'Correction log'],
-    tools: ['Excel', 'Xero', 'QuickBooks'],
-  },
-  {
-    index: '04', title: 'airSlate Workflow Support', eyebrow: 'Real engagement', Icon: DeviceIcon,
-    desc: 'Remote technical support for document workflows, bots, and automation issues.',
-    items: ['Configuration review', 'Issue diagnosis', 'Corrective guidance', 'Resolution notes'],
-    tools: ['airSlate', 'Slack', 'Jira'],
   },
 ]
 
@@ -33,8 +27,8 @@ export default function ProjectsGrid() {
     <section className="pgrid" aria-labelledby="projects-title">
       <header className="pgrid__head">
         <span className="pgrid__eyebrow">Projects</span>
-        <h1 className="pgrid__title" id="projects-title">Proof of process, not inflated claims.</h1>
-        <p className="pgrid__lede">These samples show how I structure common support work. They are clearly labeled so employers can separate demonstration work from paid experience.</p>
+        <h1 className="pgrid__title" id="projects-title">Three case studies. Problem, action, result.</h1>
+        <p className="pgrid__lede">The first card is paid remote work. The next two are labeled samples so a hiring manager can see how I structure operations work.</p>
       </header>
       <div className="home__glass pgrid__glass">
         <div className="bento bento--projects">
@@ -51,7 +45,7 @@ export default function ProjectsGrid() {
             <p className="project-tools"><strong>Tools:</strong> {p.tools.join(' · ')}</p>
           </article>)}
         </div>
-        <p className="project-note"><strong>Transparency:</strong> Items marked “Portfolio sample” are self-directed demonstrations, not paid client engagements.</p>
+        <p className="project-note"><strong>Transparency:</strong> “Paid remote work” is a real engagement. “Case study sample” means a demonstration, not a named client.</p>
       </div>
     </section>
   )
