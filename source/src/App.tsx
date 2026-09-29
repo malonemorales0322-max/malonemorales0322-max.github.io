@@ -30,7 +30,7 @@ export default function App() {
   useLenis()
 
   const { pathname } = useLocation()
-  const FIXED_ROUTES = ['/', '/projects', '/about', '/contact']
+  const FIXED_ROUTES = ['/', '/projects', '/contact']
   const isFixed = FIXED_ROUTES.includes(pathname)
   // Below the shell breakpoint the rail is gone: a bottom tab bar navigates,
   // the theme switch floats top-right on every page but Home (whose profile

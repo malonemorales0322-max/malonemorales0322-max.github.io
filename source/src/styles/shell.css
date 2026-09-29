@@ -143,6 +143,3 @@
 }
 
 /* The About view grows with its credential list. Keep all links reachable. */
-@media (min-width: 1100px) {
-  .shell__panel[data-fixed='true']:has(.agrid) { overflow-y: auto; }
-}

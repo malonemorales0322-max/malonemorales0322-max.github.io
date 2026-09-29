@@ -1,13 +1,10 @@
-/* ============================================
-   ABOUT - the fixed viewport
-   Head, then one glass sheet split in two: who I am on the left, the desk
-   illustration on the right. Sized to the panel, so nothing here scrolls.
-   ============================================ */
+/* ABOUT: let the content set the page height as credentials grow. */
 
 .agrid__glass { min-height: 0; }
 
 @media (min-width: 1100px) {
-  .agrid__glass { display: flex; align-items: center; justify-content: center; }
+  .agrid.pgrid { display: flex; height: auto; min-height: 100%; }
+  .agrid__glass { display: flex; align-items: stretch; justify-content: center; flex: 0 0 auto; }
   .agrid__copy { width: min(100%, 980px); }
 }
 
