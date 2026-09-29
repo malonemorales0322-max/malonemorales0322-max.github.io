@@ -31,6 +31,28 @@
         }
       })();
     </script>
+    <script>
+      (function () {
+        const swap = (img) => {
+          if (!img || img.tagName !== 'IMG') return;
+          const src = img.getAttribute('src') || '';
+          if (src.includes('/home/') && src.endsWith('.jpeg')) {
+            img.setAttribute('src', src.replace(/\.jpeg$/, '.svg'));
+          }
+        };
+        const scan = (root) => root.querySelectorAll && root.querySelectorAll('img').forEach(swap);
+        const mo = new MutationObserver((muts) => {
+          muts.forEach((m) => {
+            if (m.type === 'attributes' && m.target.tagName === 'IMG') swap(m.target);
+            m.addedNodes && m.addedNodes.forEach((n) => {
+              if (n.tagName === 'IMG') swap(n);
+              else scan(n);
+            });
+          });
+        });
+        mo.observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['src'] });
+      })();
+    </script>
     <script type="module" crossorigin src="/assets/index-CksnKhP0.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-1n0V1Wnx.css">
   </head>
