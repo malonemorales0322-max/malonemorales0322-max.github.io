@@ -141,3 +141,8 @@
   --tint-strong: rgba(21, 40, 63, 0.09);
   --orange-ink: #245A7C;
 }
+
+/* The About view grows with its credential list. Keep all links reachable. */
+@media (min-width: 1100px) {
+  .shell__panel[data-fixed='true']:has(.agrid) { overflow-y: auto; }
+}
