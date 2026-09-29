@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malone Morales | Operations & Virtual Support</title>
-    <meta name="description" content="Portfolio of Malone Morales — operations, administration, reporting, workflow support, and customer service for growing teams." />
+    <title>Malone Morales | Remote Operations & Business Support</title>
+    <meta name="description" content="Remote operations, administration, reporting, and workflow support. MBA and IT background. Based in the Philippines, available across time zones." />
     <link rel="canonical" href="https://malonemorales0322-max.github.io/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <script>
@@ -19,24 +19,28 @@
     </script>
     <script>
       (function () {
-        const swap = (img) => {
-          if (!img || img.tagName !== 'IMG') return;
-          const src = img.getAttribute('src') || '';
-          if (src.includes('/home/') && src.endsWith('.jpeg')) {
-            img.setAttribute('src', src.replace(/\.jpeg$/, '.svg'));
-          }
-        };
-        const scan = (root) => root.querySelectorAll && root.querySelectorAll('img').forEach(swap);
-        const mo = new MutationObserver((muts) => {
-          muts.forEach((m) => {
-            if (m.type === 'attributes' && m.target.tagName === 'IMG') swap(m.target);
-            m.addedNodes && m.addedNodes.forEach((n) => {
-              if (n.tagName === 'IMG') swap(n);
-              else scan(n);
-            });
+        const swaps = [
+          ['Operations made clear.', 'Remote ops, done clearly.'],
+          ['Work moved forward.', 'Hire me across time zones.'],
+          ['I help growing teams stay organized through dependable administration, reporting, workflow support, and customer service.', 'Remote operations, admin, and workflow support for teams that need a dependable counterpart across time zones.'],
+          ['Practical samples of how I organize work and information.', 'Three short case studies: trackers, SOPs, and live workflow support.'],
+        ];
+        const apply = () => {
+          const walker = document.createTreeWalker(document.body || document.documentElement, NodeFilter.SHOW_TEXT);
+          const nodes = [];
+          while (walker.nextNode()) nodes.push(walker.currentNode);
+          nodes.forEach((n) => {
+            let t = n.nodeValue;
+            if (!t) return;
+            swaps.forEach(([a, b]) => { if (t.includes(a)) t = t.split(a).join(b); });
+            if (t !== n.nodeValue) n.nodeValue = t;
           });
-        });
-        mo.observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['src'] });
+          document.querySelectorAll('a[href*="Malone-Morales-Resume.pdf"]').forEach((a) => {
+            if (!a.href.includes('v=20260930')) a.setAttribute('href', '/Malone-Morales-Resume.pdf?v=20260930');
+          });
+        };
+        new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true });
+        document.addEventListener('DOMContentLoaded', apply);
       })();
     </script>
     <script type="module" crossorigin src="/assets/index-CksnKhP0.js"></script>
