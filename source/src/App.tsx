@@ -1,4 +1,5 @@
-import { lazy, Suspense, useState, useEffect, useRef } from 'react'
+import { Component, lazy, Suspense, useState, useEffect, useRef } from 'react'
+import type { ReactNode } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import TabBar from '@/components/TabBar'
 import ThemeButton from '@/components/ThemeButton'
@@ -16,6 +17,14 @@ import { getPerfTier, watchFrameHealth, PERF_TIER_EVENT } from '@/lib/perf'
 // handles the visual baseline. PageSpeed showed Three.js had 76.6 KiB
 // of unused JS; not loading it at all on mobile is the cleaner fix.
 const HeroCanvas = lazy(() => import('@/components/HeroCanvasV2'))
+
+class CanvasErrorBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false }
+
+  static getDerivedStateFromError() { return { failed: true } }
+
+  render() { return this.state.failed ? null : this.props.children }
+}
 
 /**
  * The shell. It owns everything that outlives a route change: the contour
@@ -86,9 +95,11 @@ export default function App() {
       <IntroOverlay />
       <a href={`#${SCROLLER_ID}`} className="skip-link">Skip to main content</a>
       {shouldLoadCanvas && perfTier !== 'low' && (
-        <Suspense fallback={null}>
-          <HeroCanvas />
-        </Suspense>
+        <CanvasErrorBoundary>
+          <Suspense fallback={null}>
+            <HeroCanvas />
+          </Suspense>
+        </CanvasErrorBoundary>
       )}
       {phone && pathname !== '/' && <ThemeButton className="theme-btn--float" />}
       <div className="shell">
