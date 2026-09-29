@@ -103,6 +103,14 @@ export default function AboutGrid() {
 
           {/* One plate, two cells sharing a mark / title / meta anatomy. */}
           <div className="agrid__bar">
+            <a className="agrid__cell agrid__cell--wide" href="/HubSpot-Sales-Hub-Certificate.png" target="_blank" rel="noreferrer">
+              <span className="agrid__cell-mark agrid__cell-mark--plain" aria-hidden="true">HS</span>
+              <span className="agrid__cell-copy">
+                <span className="agrid__cell-title">HubSpot Sales Hub Software Certified</span>
+                <span className="agrid__cell-meta">HubSpot Academy · Sep 2026–Oct 2027 · View certificate</span>
+              </span>
+              <ArrowUpRight className="agrid__cell-go" size={15} weight="bold" aria-hidden="true" />
+            </a>
             <span className="agrid__cell">
               <span className="agrid__cell-mark agrid__cell-mark--img">
                 <img src="/icons/resume.svg" alt="" loading="lazy" decoding="async" />
