@@ -7,6 +7,9 @@
 .xgrid__date { color: var(--muted); font-size: .82rem; font-weight: 700; }
 .xgrid__body h2 { margin: 0; color: var(--navy); font-size: 1.05rem; }
 .xgrid__title { margin: .15rem 0 .55rem; color: var(--orange); font-weight: 700; }
+.xgrid__positions { margin: .15rem 0 .55rem; }
+.xgrid__positions .xgrid__title { margin: .1rem 0; }
+.xgrid__positions .xgrid__title span { color: var(--muted); font-size: .82rem; font-weight: 600; white-space: nowrap; }
 .xgrid__body ul { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .88rem; }
 .xgrid__body li + li { margin-top: .25rem; }
 .xgrid__resume { display: inline-flex; margin-top: 1.25rem; padding: .75rem 1rem; border-radius: 999px; color: white; background: var(--navy); font-weight: 700; text-decoration: none; }
