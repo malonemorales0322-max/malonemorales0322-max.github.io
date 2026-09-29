@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Malone Morales | Operations & Virtual Support</title>
-    <meta name="description" content="Portfolio of Malone Morales — operations, administration, reporting, workflow support, and customer service for growing teams." />
+    <title>Malone Morales | Remote Operations & Business Support</title>
+    <meta name="description" content="Remote operations, administration, reporting, and workflow support. MBA and IT background. Based in the Philippines, available across time zones." />
     <meta name="author" content="Malone de Leon Morales" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#15283F" />
@@ -15,8 +15,8 @@
     <link rel="preload" as="image" href="/profile-photo.jpg" fetchpriority="high" media="(min-width: 1100px)" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Malone Morales" />
-    <meta property="og:title" content="Malone Morales | Operations & Virtual Support" />
-    <meta property="og:description" content="Dependable operations, administrative, data, and workflow support backed by 10+ years of hands-on experience." />
+    <meta property="og:title" content="Malone Morales | Remote Operations & Business Support" />
+    <meta property="og:description" content="Remote operations, admin, and workflow support for teams that need a dependable counterpart across time zones." />
     <meta property="og:url" content="https://malonemorales0322-max.github.io/" />
     <meta property="og:image" content="https://malonemorales0322-max.github.io/profile-photo.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,6 +51,37 @@
           });
         });
         mo.observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['src'] });
+      })();
+    </script>
+    <script>
+      (function () {
+        const swaps = [
+          ['Operations made clear.', 'Remote ops, done clearly.'],
+          ['Work moved forward.', 'Hire me across time zones.'],
+          ['I help growing teams stay organized through dependable administration, reporting, workflow support, and customer service.', 'Remote operations, admin, and workflow support for teams that need a dependable counterpart across time zones.'],
+          ['Practical samples of how I organize work and information.', 'Three short case studies: trackers, SOPs, and live workflow support.'],
+          ['Practical work samples', 'Three case studies'],
+          ['Trackers, SOPs, and reconciliation workflows.', 'Trackers, SOPs, and remote workflow support.'],
+        ];
+        const apply = () => {
+          const walker = document.createTreeWalker(document.body || document.documentElement, NodeFilter.SHOW_TEXT);
+          const nodes = [];
+          while (walker.nextNode()) nodes.push(walker.currentNode);
+          nodes.forEach((n) => {
+            let t = n.nodeValue;
+            if (!t) return;
+            swaps.forEach(([a, b]) => {
+              if (t.includes(a)) t = t.split(a).join(b);
+            });
+            if (t !== n.nodeValue) n.nodeValue = t;
+          });
+          document.querySelectorAll('a[href*="Malone-Morales-Resume.pdf"]').forEach((a) => {
+            if (!a.href.includes('v=20260930')) a.setAttribute('href', '/Malone-Morales-Resume.pdf?v=20260930');
+          });
+        };
+        const mo = new MutationObserver(apply);
+        mo.observe(document.documentElement, { childList: true, subtree: true });
+        document.addEventListener('DOMContentLoaded', apply);
       })();
     </script>
     <script type="module" crossorigin src="/assets/index-CksnKhP0.js"></script>
