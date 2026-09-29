@@ -126,7 +126,7 @@ export default function HomeBento() {
 
       {/* Credentials: the badge that matters, on its plate. */}
       <Link to="/about" className="bento__card bento__card--creds">
-        <CardHead Icon={Medal} title="Credentials" desc="MBA, BSIT, and HubSpot Sales Hub certification." />
+        <CardHead Icon={Medal} title="Credentials" desc="MBA, BSIT, and HubSpot Sales and Service Hub certifications." />
         <div className="bento__media bento__badge" aria-hidden="true">
           <span className="bento__badge-ring">
             <img src="/placeholders/badge.svg" alt="" width={72} height={72} />
