@@ -4,95 +4,99 @@ export type AppProject = {
   name: string
   tagline: string
   description: string
-  /** Optional - omit for gradient placeholder cards */
   imageSrc?: string
-  /** CSS object-position override. Defaults to 'top center'. */
   imagePosition?: string
-  /** External brand color - not a site token. Passed via --app-color inline prop. */
   accentColor: string
   stats: AppStat[]
   badge: string
 }
 
-/** @deprecated use AppProject */
 export type MobileApp = AppProject
-
-/**
- * Your apps. Every value is a PLACEHOLDER. Screenshots live in
- * public/placeholders/ - swap in your own (960x514 works well).
- */
-const STATS: AppStat[] = [
-  { value: '0', label: 'Stat one' },
-  { value: '0', label: 'Stat two' },
-  { value: '0', label: 'Stat three' },
-]
-
-const DESC = 'PLACEHOLDER - tell me what to put here: what the app does, who it is for, and where it is published.'
 
 export const mobileApps: MobileApp[] = [
   {
-    name: 'App Name One',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
+    name: 'Daily operations tracker',
+    tagline: 'One list for owners, tasks, and due dates.',
+    description:
+      'A working sample of how I keep daily operations visible: owners, status, and the next action. Built for teams that outgrow scattered chat threads.',
     imageSrc: '/placeholders/app-1.jpg',
     imagePosition: '50% 30%',
-    accentColor: '#2563EB',
-    stats: STATS,
-    badge: 'Badge',
+    accentColor: '#15283F',
+    stats: [
+      { value: '1 view', label: 'Source of truth' },
+      { value: 'Daily', label: 'Review cadence' },
+      { value: 'Clear', label: 'Next action' },
+    ],
+    badge: 'Operations',
   },
   {
-    name: 'App Name Two',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
+    name: 'SOP library',
+    tagline: 'Current procedures, easy to find.',
+    description:
+      'A simple structure for storing the live version of a process: title, owner, last review date, and the steps the team actually follows.',
     imageSrc: '/placeholders/app-2.jpg',
-    accentColor: '#7C3AED',
-    stats: STATS,
-    badge: 'Badge',
+    accentColor: '#1B4F72',
+    stats: [
+      { value: 'Owner', label: 'Named on each SOP' },
+      { value: 'Versioned', label: 'Last-reviewed date' },
+      { value: 'Searchable', label: 'By team or task' },
+    ],
+    badge: 'Documentation',
   },
   {
-    name: 'App Name Three',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
+    name: 'Support queue',
+    tagline: 'Requests in, resolutions out.',
+    description:
+      'A request queue layout I use to capture the issue, the tool involved, and the resolution so the same problem is not solved twice.',
     imageSrc: '/placeholders/app-3.jpg',
-    accentColor: '#16A34A',
-    stats: STATS,
-    badge: 'Badge',
+    accentColor: '#0E7C66',
+    stats: [
+      { value: 'Logged', label: 'Every request' },
+      { value: 'Owned', label: 'Named responder' },
+      { value: 'Closed', label: 'With a note' },
+    ],
+    badge: 'Support',
   },
 ]
 
 export const webApps: AppProject[] = [
   {
-    name: 'Web App One',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
-    accentColor: '#0EA5E9',
-    stats: STATS,
-    badge: 'Badge',
+    name: 'Weekly reporting pack',
+    tagline: 'What moved. What is blocked. What needs a decision.',
+    description:
+      'A reporting format for founders and managers who need a short, honest picture of the week without a long meeting.',
+    accentColor: '#15283F',
+    stats: [
+      { value: '1 page', label: 'Owner brief' },
+      { value: 'Exceptions', label: 'Called out first' },
+      { value: 'Weekly', label: 'Cadence' },
+    ],
+    badge: 'Reporting',
   },
   {
-    name: 'Web App Two',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
-    accentColor: '#EF4444',
-    stats: STATS,
-    badge: 'Badge',
+    name: 'airSlate runbook',
+    tagline: 'How the workflow is supposed to behave.',
+    description:
+      'A troubleshooting and setup note I write after diagnosing a document automation issue: expected path, common breaks, and the fix.',
+    accentColor: '#2563EB',
+    stats: [
+      { value: 'Setup', label: 'Documented' },
+      { value: 'Breaks', label: 'Named' },
+      { value: 'Fix', label: 'Recorded' },
+    ],
+    badge: 'Workflow',
   },
   {
-    name: 'Web App Three',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
-    imageSrc: '/placeholders/project-3.jpg',
-    accentColor: '#0891B2',
-    stats: STATS,
-    badge: 'Badge',
-  },
-  {
-    name: 'Web App Four',
-    tagline: 'PLACEHOLDER - one-line tagline.',
-    description: DESC,
-    imageSrc: '/placeholders/project-4.jpg',
-    accentColor: '#F59E0B',
-    stats: STATS,
-    badge: 'Badge',
+    name: 'Handoff kit',
+    tagline: 'So coverage does not depend on memory.',
+    description:
+      'A compact kit I leave when work changes hands: logins inventory, current priorities, open vendor threads, and the next three deadlines.',
+    accentColor: '#B45309',
+    stats: [
+      { value: 'Access', label: 'Listed' },
+      { value: 'Open work', label: 'Prioritized' },
+      { value: 'Dates', label: 'Visible' },
+    ],
+    badge: 'Admin',
   },
 ]
