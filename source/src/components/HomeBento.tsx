@@ -17,16 +17,6 @@ import {
 } from '@/components/slab'
 import { gymFunnel, bookingFunnel, websiteFunnel, type Funnel } from '@/data/funnels'
 
-/**
- * Home's showcase: one card per rail view, each an index of what that view
- * holds, each built from content the portfolio already ships. Every card is
- * a link. Nothing here invents a fact - the funnels, the tools, the clients
- * and the credentials are the same records the views render in full.
- *
- * Motion is transform-only on a clipped inner track, so a card never adds
- * height and Home stays a single viewport.
- */
-
 const thumbSrc = (f: Funnel) =>
   `/home/${f.dir ?? 'funnels'}-${f.file.replace('.html', '.jpeg')}`
 
@@ -84,9 +74,8 @@ export default function HomeBento() {
 
   return (
     <nav className="bento" aria-label="Explore the portfolio">
-      {/* Projects: the funnel thumbnails drift upward on a looped track. */}
       <Link to="/projects" className="bento__card bento__card--projects">
-        <CardHead Icon={FolderOpen} title="Projects" desc="Practical samples of how I organize work and information." />
+        <CardHead Icon={FolderOpen} title="Projects" desc="Three short case studies: trackers, SOPs, and live workflow support." />
         <div className="bento__media bento__reel" aria-hidden="true">
           <div className="bento__reel-track">
             {[...PROJECT_SHOTS, ...PROJECT_SHOTS].map((f, i) => (
@@ -98,14 +87,11 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* About: the profile portrait. */}
       <Link to="/about" className="bento__card bento__card--about">
         <CardHead Icon={User} title="About" desc="An operations professional with business and IT training." />
         <p className="bento__about-line">People. Systems. Follow-through.</p>
       </Link>
 
-      {/* AI builds: the systems from the Projects tree, two chip rows
-          scrolling against each other. */}
       <Link to="/projects" className="bento__card bento__card--ai">
         <CardHead Icon={FlowArrow} title="Workflow Support" desc="Automation, technical support, and clear documentation." />
         <div className="bento__media bento__chips" aria-hidden="true">
@@ -124,7 +110,6 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* Credentials: the badge that matters, on its plate. */}
       <Link to="/about" className="bento__card bento__card--creds">
         <CardHead Icon={Medal} title="Credentials" desc="MBA, BSIT, and HubSpot Sales and Service Hub certifications." />
         <div className="bento__media bento__badge" aria-hidden="true">
@@ -138,7 +123,6 @@ export default function HomeBento() {
         </div>
       </Link>
 
-      {/* Services: the five offers as a compact index. */}
       <Link to="/services" className="bento__card bento__card--services">
         <CardHead Icon={Stack} title="Services" desc="Reliable support for teams that need structure and follow-through." />
         <ul className="bento__media bento__offers" role="list">
@@ -159,7 +143,6 @@ export default function HomeBento() {
         </ul>
       </Link>
 
-      {/* Testimonials: client cards drifting up a clipped column. */}
       <Link to="/experience" className="bento__card bento__card--quotes">
         <CardHead Icon={Quotes} title="Experience" desc="Real roles across operations, technology, government, and banking." />
         <div className="bento__media bento__reviews" aria-hidden="true">
