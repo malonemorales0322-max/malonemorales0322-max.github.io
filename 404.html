@@ -3,34 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Malone Morales | Operations & Virtual Support</title>
     <meta name="description" content="Portfolio of Malone Morales — operations, administration, reporting, workflow support, and customer service for growing teams." />
-    <meta name="author" content="Malone de Leon Morales" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
-    <meta name="theme-color" content="#15283F" />
     <link rel="canonical" href="https://malonemorales0322-max.github.io/" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
-
-    <!-- The rail avatar is above the fold on every desktop route. Keep this in
-         sync with profile.avatarSrc in src/data/profile.ts. -->
-    <link rel="preload" as="image" href="/profile-photo.jpg" fetchpriority="high" media="(min-width: 1100px)" />
-
-    <!-- Open Graph / social share. og:image must be an absolute URL once you deploy. -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Malone Morales" />
-    <meta property="og:title" content="Malone Morales | Operations & Virtual Support" />
-    <meta property="og:description" content="Dependable operations, administrative, data, and workflow support backed by 10+ years of hands-on experience." />
-    <meta property="og:url" content="https://malonemorales0322-max.github.io/" />
-    <!-- <meta property="og:image" content="https://yoursite.com/share.png" /> -->
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Theme before first paint: no flash of the wrong palette. Default is
-         light; dark is the visitor's opt-in, persisted in localStorage. -->
     <script>
       (function () {
         try {
@@ -39,6 +15,28 @@
         } catch (e) {
           document.documentElement.dataset.theme = 'light';
         }
+      })();
+    </script>
+    <script>
+      (function () {
+        const swap = (img) => {
+          if (!img || img.tagName !== 'IMG') return;
+          const src = img.getAttribute('src') || '';
+          if (src.includes('/home/') && src.endsWith('.jpeg')) {
+            img.setAttribute('src', src.replace(/\.jpeg$/, '.svg'));
+          }
+        };
+        const scan = (root) => root.querySelectorAll && root.querySelectorAll('img').forEach(swap);
+        const mo = new MutationObserver((muts) => {
+          muts.forEach((m) => {
+            if (m.type === 'attributes' && m.target.tagName === 'IMG') swap(m.target);
+            m.addedNodes && m.addedNodes.forEach((n) => {
+              if (n.tagName === 'IMG') swap(n);
+              else scan(n);
+            });
+          });
+        });
+        mo.observe(document.documentElement, { subtree: true, childList: true, attributes: true, attributeFilter: ['src'] });
       })();
     </script>
     <script type="module" crossorigin src="/assets/index-CksnKhP0.js"></script>
