@@ -33,7 +33,7 @@ export const profile: Profile = {
   name: 'Malone Morales',
   firstName: 'Malone',
   handle: '@malonemorales',
-  role: 'Remote Operations & Business Support',
+  role: 'Operations Manager | HubSpot & Process Improvement | Six Sigma Yellow Belt',
   avatarSrc: '/profile-photo.jpg',
   verifiedLabel: 'MBA and Information Technology graduate',
   email: 'malonemorales0322@gmail.com',
@@ -52,6 +52,6 @@ export const profile: Profile = {
   socials: [
     { label: 'LinkedIn profile', href: 'https://www.linkedin.com/in/malone-morales-6b0a92182', iconPath: '/icons/linkedin.svg' },
     { label: 'Email Malone', href: 'mailto:malonemorales0322@gmail.com', iconPath: '/icons/email.svg' },
-    { label: 'Download résumé', href: '/Malone-Morales-Resume.pdf?v=20260930', iconPath: '/icons/resume.svg' },
+    { label: 'Download résumé', href: '/Malone-Morales-Resume.pdf?v=20261001', iconPath: '/icons/resume.svg' },
   ],
 }
