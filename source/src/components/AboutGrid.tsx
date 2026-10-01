@@ -74,7 +74,7 @@ export default function AboutGrid() {
           </p>
 
           <p className="agrid__note">
-            With an <strong>MBA</strong>, a BS in Information Technology, and more than a
+            With an <strong>MBA</strong>, a BS in Information Technology, Six Sigma Yellow Belt, and more than a
             decade across operations, banking, government, technical support, and small
             business, I can see both the process and the person depending on it.
           </p>
@@ -116,6 +116,22 @@ export default function AboutGrid() {
               <span className="agrid__cell-copy">
                 <span className="agrid__cell-title">HubSpot Sales Hub Software Certified</span>
                 <span className="agrid__cell-meta">HubSpot Academy · Sep 2026–Oct 2027 · View certificate</span>
+              </span>
+              <ArrowUpRight className="agrid__cell-go" size={15} weight="bold" aria-hidden="true" />
+            </a>
+            <a className="agrid__cell agrid__cell--wide" href="https://www.6sigmastudy.com" target="_blank" rel="noreferrer">
+              <span className="agrid__cell-mark agrid__cell-mark--plain" aria-hidden="true">SS</span>
+              <span className="agrid__cell-copy">
+                <span className="agrid__cell-title">Six Sigma Yellow Belt (SSYB™)</span>
+                <span className="agrid__cell-meta">6sigmastudy · October 2026 · ID 1195306</span>
+              </span>
+              <ArrowUpRight className="agrid__cell-go" size={15} weight="bold" aria-hidden="true" />
+            </a>
+            <a className="agrid__cell agrid__cell--wide" href="https://www.sixsigmacouncil.org" target="_blank" rel="noreferrer">
+              <span className="agrid__cell-mark agrid__cell-mark--plain" aria-hidden="true">WB</span>
+              <span className="agrid__cell-copy">
+                <span className="agrid__cell-title">Six Sigma White Belt</span>
+                <span className="agrid__cell-meta">Council for Six Sigma Certification · September 2026</span>
               </span>
               <ArrowUpRight className="agrid__cell-go" size={15} weight="bold" aria-hidden="true" />
             </a>
