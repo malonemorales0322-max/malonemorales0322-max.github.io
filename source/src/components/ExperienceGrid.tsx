@@ -7,6 +7,7 @@ type Experience = {
 }
 
 const ROLES: Experience[] = [
+  {"date":"Oct 2026 – Present","company":"CompuLoop","title":"Business Solutions Consultant · Remote Contract","points":["Conduct B2B prospecting and qualify requirements for managed IT, Microsoft 365, cybersecurity, and cloud services.","Coordinate technical discovery, presentations, proposals, and pricing discussions with management.","Maintain HubSpot records, follow up with prospects, and support sales handover to delivery teams."]},
   { date: 'May 2024 – Present', company: 'Halara Coffee Club', title: 'Operations Manager', points: ['Oversee daily operations, staffing, service standards, and administrative coordination.', 'Coach employees and improve workflows to support consistent performance and customer experience.'] },
   { date: 'Feb 2021 – Dec 2021', company: 'Private Client · airSlate Project', title: 'Freelance Workflow Technical Support', points: ['Diagnosed bot configuration, workflow execution, and document automation issues.', 'Reviewed setups, recommended corrective actions, and documented resolutions.'] },
   { date: 'Jan 2018 – Sep 2023', company: 'Beyond The Crust Manila', title: 'Co-Owner & Business Manager', points: ['Directed scheduling, inventory, marketing, customer engagement, and vendor coordination.', 'Managed expenses, budgeting, records, and operational decisions.'] },
@@ -21,7 +22,7 @@ export default function ExperienceGrid() {
     <header className="pgrid__head">
       <span className="pgrid__eyebrow">Experience</span>
       <h1 className="pgrid__title" id="experience-title">Broad experience. Transferable discipline.</h1>
-      <p className="pgrid__lede">My career crosses operations, small business, technology, government compliance, customer support, and banking.</p>
+      <p className="pgrid__lede">My experience spans operations, B2B technology sales, workflow support, government compliance, and banking.</p>
     </header>
     <div className="home__glass xgrid__glass">
       <ol className="xgrid__timeline">

@@ -31,6 +31,7 @@ const OFFERS = [
 ] as const
 
 const CLIENTS = [
+  {"name":"CompuLoop","role":"Business Solutions Consultant","work":"B2B Sales · IT Solutions · HubSpot","logo":"/icons/resume.svg"},
   { name: 'Halara Coffee Club', role: 'Operations Manager', work: 'Operations · People · Service', logo: '/icons/resume.svg' },
   { name: 'Private Client', role: 'airSlate Workflow Support', work: 'Automation · Troubleshooting · Documentation', logo: '/icons/airslate.svg' },
   { name: 'The Real Bank', role: 'Marketing & ATM Operations', work: 'Banking · Reconciliation · Client Service', logo: '/icons/resume.svg' },
